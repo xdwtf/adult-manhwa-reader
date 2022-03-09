@@ -71,7 +71,7 @@
           page==null?page=1:page
 
           let latestBox = document.getElementById('latestBox')
-          let aniRequest = new loadApi(`https://manhwa-api.vercel.app/api/all/${page}`)
+          let aniRequest = new loadApi(`https://manhwa-scraper-api.vercel.app/api/all/${page}`)
 
           latestBox.innerHTML = `
           <div id="loader" class="loader text-center">
