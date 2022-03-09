@@ -93,7 +93,7 @@
               
               chaptr = result.manga
 
-              let mangaUrl = result.manga_url.replace('https://hiperdex.com/manga/','').replace('/','')
+              let mangaUrl = result.manga_url.replace('https://hentaiscan.net/manga/','').replace('/','')
 
               document.getElementById('m_name').innerHTML = `<a class="text-decoration-none" href="/manga.html?manga=${mangaUrl}">${result.manga}</a>`
 
@@ -110,9 +110,9 @@
               document.querySelectorAll('#next-prev').forEach(function(node){
                   node.innerHTML = `
                      <div class="d-flex flex-wrap justify-content-between">
-                        ${result.nav[0].prev?`<a href="/reader.html?manga=${result.nav[0].prev.replace('https://hiperdex.com/manga/','')}" class="btn btn-primary d-inline-block">← Previous</a>`:'<span></span>'}
+                        ${result.nav[0].prev?`<a href="/reader.html?manga=${result.nav[0].prev.replace('https://hentaiscan.net/manga/','')}" class="btn btn-primary d-inline-block">← Previous</a>`:'<span></span>'}
 
-                        ${result.nav[0].next?`<a href="/reader.html?manga=${result.nav[0].next.replace('https://hiperdex.com/manga/','')}" class="btn btn-primary d-inline-block">Next →</a>`:'<span></span>'}
+                        ${result.nav[0].next?`<a href="/reader.html?manga=${result.nav[0].next.replace('https://hentaiscan.net/manga/','')}" class="btn btn-primary d-inline-block">Next →</a>`:'<span></span>'}
                       </div>
                   `
               })
