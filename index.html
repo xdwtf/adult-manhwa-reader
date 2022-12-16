@@ -71,7 +71,7 @@
           page==null?page=1:page
 
           let latestBox = document.getElementById('latestBox')
-          let aniRequest = new loadApi(`https://manhwa-scraper-api.vercel.app/api/latest/${page}`)
+          let aniRequest = new loadApi(`https://manhwa-scraper-85zm7zjc3-touka19.vercel.app/api/latest/${page}`)
 
           latestBox.innerHTML = `
           <div id="loader" class="loader text-center">
@@ -88,7 +88,7 @@
                     <div class="col-12 col-md-6 col-lg-4 rounded px-4 pb-4">
                       <div class="manga-holder bg-light row">
                         <div class="col-auto m-0 p-0">
-                          <a href="/manga.html?manga=${manga.url.replace('https://hentaiscan.net/manga/','').replace('/','')}">
+                          <a href="/manga.html?manga=${manga.url.replace('https://manhwahentai.me/webtoon/','').replace('/','')}">
                             <img src="${manga.image}" class="img-fluid" style="height:150px; width:120px; object-fit: cover;">
                           </a>
                         </div>
@@ -96,10 +96,10 @@
                         <span><i class="fas fa-star" style="color:gold;"></i> ${manga.rating}
                           <div>
                           </span>
-                            <h3 class="fs-5 manga-title"><a href="/manga.html?manga=${manga.url.replace('https://hentaiscan.net/manga/','').replace('/','')}" class="text-decoration-none" title="${manga.title}">${manga.title}</a></h3>
+                            <h3 class="fs-5 manga-title"><a href="/manga.html?manga=${manga.url.replace('https://manhwahentai.me/webtoon/','').replace('/','')}" class="text-decoration-none" title="${manga.title}">${manga.title}</a></h3>
                             
                             ${manga.chapters.map(chapter => {
-                              return `<div><a href="/reader.html?manga=${chapter.c_url.replace('https://hentaiscan.net/manga','').replace('/','')}" class="text-muted">${chapter.c_title}</a> - <span class="text-muted">${chapter.status?chapter.status:chapter.c_date}</span></div>`
+                              return `<div><a href="/reader.html?manga=${chapter.c_url.replace('https://manhwahentai.me/webtoon','').replace('/','')}" class="text-muted">${chapter.c_title}</a> - <span class="text-muted">${chapter.status?chapter.status:chapter.c_date}</span></div>`
                             }).join('')}
                           </div>
                         </div>
